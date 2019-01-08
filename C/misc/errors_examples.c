@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 		perror("\0"); /* Null byte as argument */
 		perror("Error");
 		fprintf(stderr, "Error %d: %s\n", errno, strerror(errno));
-		
+
 		exit(EXIT_FAILURE);
 	}
 
