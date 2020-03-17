@@ -1,0 +1,55 @@
+\documentclass[letterpaper, 10pt, twocolumn]{article}
+
+\usepackage{blindtext}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{template.bib}
+\usepackage{csquotes}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{}
+\fancyhf{}
+\pagestyle{fancy}
+\rhead{Some header}
+\lhead{Yet another header}
+\cfoot{\thepage}
+
+
+\begin{document}
+
+\begin{titlepage}
+ \centering
+ {\Huge\textbf{Some Title}\par}
+ \vspace{1cm}
+ {\scshape\Large Your Subject\par}
+ \vspace{1.5cm}
+ {\scshape\LARGE Your University\par}
+ \vspace{2cm}
+ {\Large\textit{John Doe}\par}
+ \vfill
+ \vfill
+
+ % Bottom of the page
+ {\large \today\par}
+\end{titlepage}
+
+
+\textbf{\textit{Abstract}—\blindtext[1]}
+
+\section{Section 1}
+\blindtext[1]
+\subsection{Subsection}
+Let's try out some citations! \cite{einstein,latexcompanion,knuthwebsite}
+
+\section{Section 2}
+\blindtext[1]
+
+\section{Section 3}
+\blindtext[1]
+
+\addcontentsline{toc}{section}{References}
+\printbibliography
+
+\tableofcontents
+
+\end{document}
